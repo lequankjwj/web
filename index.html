@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+            initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="Oq299GAaOt5M8rsjDVfZxkxuoCq6bz5h5cua-PmNlyE" />
+    <title>SMS</title>
+    <link rel="shortcut icon" href="./Themes/TH1041/Assets/images/102412453_905324753268915_7292890608339490304_n.png" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&amp;family=Oswald:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Themes/TH1041/Assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="Themes/TH1041/Assets/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="Themes/TH1041/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Themes/TH1041/Assets/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="Themes/TH1041/Assets/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="Themes/TH1041/Assets/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="Themes/TH1041/Assets/css/lightgallery.min.css">
+
+    <script type="text/javascript" src="Themes/TH1041/Assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="Themes/TH1041/Assets/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="Themes/TH1041/Assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Themes/TH1041/Assets/js/bootstrap.bundle.min.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v5.0"></script>
+</head>
+
+<body>
+    <header id="myHeader">
+        <div class="bg_hd">
+            <div class="container">
+                <div class="logo_dangky">
+                    <div class="logo_header">
+                        <a href="index.html"> <img src="Themes/TH1041/Assets/images/1x/Layer 1 Image.png" alt="Logo"></a>
+                    </div>
+                    <div class="menu_box">
+                        <div class="header-menu">
+                            <nav id='cssmenu'>
+                                <div id="head-mobile"></div>
+                                <p class="menu_tt_mb">Menu</p>
+                                <div class="button"></div>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu-chung.html" title="GIỚI THIỆU">Trang chủ</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu-chung.html" title="GIỚI THIỆU">Giới thiệu</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#" title="TỔ CHỨC">Dịch vụ</a>
+                                        <ul>
+                                            <li>
+                                                <a href="chi-bo-dang.html" title="Chi bộ Đảng">Gi</a>
+                                            </li>
+                                            <li>
+                                                <a href="ban-giam-hieu.html" title="Ban gi&#225;m
+                                                        hiệu">Nogi</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#" title="BẢN TIN">Tin tức</a>
+                                    </li>
+                                    <li>
+                                        <a href="giao-duc-ki-nang-song.html" title="Gi&#225;o dục">Thư viện</a>
+                                    </li>
+                                    <li>
+                                        <a href="giao-duc-ki-nang-song.html" title="Gi&#225;o dục">Liên hệ
+                                            </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <span id="back-to-top" class="backTop" style="display: block;">
+        <i class="fa fa-arrow-up"></i>
+    </span>
+
+    <style>
+        body .backTop:hover {
+            background: #af0208;
+        }
+        
+        body .backTop {
+            position: fixed;
+            right: 20px;
+            bottom: 18px;
+            width: 40px;
+            height: 40px;
+            line-height: 45px;
+            font-size: 25px;
+            z-index: 400;
+            background: #bd141a;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            text-align: center;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            body .backTop {
+                bottom: 60px;
+            }
+        }
+        
+        body .backTop,
+        header.inside .menu>li>a,
+        header.inside .menu>li>ul>li>a {
+            color: #fff;
+        }
+    </style>
+    <script>
+        jQuery(document).ready(function() {
+            $('.backTop').hide();
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 150) {
+                    $('.backTop').fadeIn(100)
+                } else {
+                    $('.backTop').fadeOut()
+                }
+            });
+        });
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function() {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function() {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function(e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+    <section>
+        <div class="slide">
+            <div class="owl-carousel owl-theme" id="slide">
+                <div class="item h_slide">
+                    <a href="" title="">
+                        <img src="Themes/TH1041/Assets/images/sl1.png" alt="">
+                    </a>
+                </div>
+                <div class="item h_slide">
+                    <a href="" title="">
+                        <img src="Themes/TH1041/Assets/images/sl12.png" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <script type="text/javascript">
+                $('#slide').owlCarousel({
+                    autoplay: true,
+                    items: 1,
+                    nav: false,
+                    loop: true,
+                    dots: false,
+
+
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true
+                });
+            </script>
+        </div>
+    </section>
+    <section class=" mt-4 mb-4">
+        <div class="container">
+            <div class="title_main mb-4">
+                <h2 class="title-home" style="text-align: center;">GIỚI THIỆU VỀ <span style="color: #ed1c24;">Submission
+                            Grappling Club D3</span></h2>
+                <img src="./Themes/TH1041/Assets/images/titile.jpg" alt="">
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-6 col-xs-12">
+                    <div class="about_title mb-4">
+                        <h1 class="uppercase"><strong>APEXFITNESS VÀ CHẶNG
+                                    ĐƯỜNG PHÁT TRIỂN</strong></h1>
+                        <p class="t-kf">Chúng tôi hiểu những áp lực và mệt mỏi trong công việc, cuộc sống của bạn. Và hơn bao giờ hết, chúng tôi cũng thấu hiểu những mong muốn có được sức khỏe tốt, cơ thể đẹp là của bất kỳ ai. Bởi vậy, tại Apex fitness, chúng tôi đều
+                            luôn luôn tự nỗ lực không ngừng để mang đến chương trình luyện tập KickFitness và HIIT chất lượng hàng đầu. Đó là cách hiệu quả và lành mạnh nhất để lấy lại sự sung sức, vóc dáng cân đối, cải thiện các vấn đề sức khỏe như đau
+                            mỏi lưng, vai, xương do ngồi nhiều, lười vận động, đồng thời gia tăng phản xạ linh hoạt, tự vệ bản thân.&nbsp;</p>
+                        <a href="" target="_self" class="button_about">
+                            <span>Xem tiếp</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="img_about">
+                        <img width="920" height="585" src="http://phongtapgym.sharekhoahoc.vn/wp-content/uploads/2021/07/gioi-thieu-gym.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 col-xs-12">
+                    <div class="img_about">
+                        <img width="920" height="585" src="http://phongtapgym.sharekhoahoc.vn/wp-content/uploads/2021/07/gioi-thieu-gym.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="about_title mb-4">
+                        <h1 class="uppercase mt-2"><strong>APEXFITNESS VÀ CHẶNG
+                                    ĐƯỜNG PHÁT TRIỂN</strong></h1>
+                        <p class="t-kf">Chúng tôi hiểu những áp lực và mệt mỏi trong công việc, cuộc sống của bạn. Và hơn bao giờ hết, chúng tôi cũng thấu hiểu những mong muốn có được sức khỏe tốt, cơ thể đẹp là của bất kỳ ai. Bởi vậy, tại Apex fitness, chúng tôi đều
+                            luôn luôn tự nỗ lực không ngừng để mang đến chương trình luyện tập KickFitness và HIIT chất lượng hàng đầu. Đó là cách hiệu quả và lành mạnh nhất để lấy lại sự sung sức, vóc dáng cân đối, cải thiện các vấn đề sức khỏe như đau
+                            mỏi lưng, vai, xương do ngồi nhiều, lười vận động, đồng thời gia tăng phản xạ linh hoạt, tự vệ bản thân.&nbsp;</p>
+                        <a href="" target="_self" class="button_about">
+                            <span>Xem tiếp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services pt-5 pb-5 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="container">
+            <div class="title_main mb-4">
+                <h2 class="title-home text-white" style="text-align:
+                        center;">Thành viên</h2>
+                <img src="./Themes/TH1041/Assets/images/titile.jpg" alt="">
+            </div>
+            <div class="content pt-2">
+
+                <div class="partner-logo owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2">
+                                    <h3>
+
+                                        Anh Tuan
+
+                                    </h3>
+                                    <p>
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2">
+                                    <h3>
+
+                                        Anh Tuan
+
+                                    </h3>
+                                    <p>
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2">
+                                    <h3>
+
+                                        Anh Tuan
+
+                                    </h3>
+                                    <p>
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2">
+                                    <h3>
+
+                                        Anh Tuan
+
+                                    </h3>
+                                    <p>
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2">
+                                    <h3>
+
+                                        Anh Tuan
+
+                                    </h3>
+                                    <p>
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $('.partner-logo').owlCarousel({
+                        loop: true,
+
+                        autoplay: true,
+                        nav: true,
+                        dots: false,
+                        autoplayTimeout: 2000,
+                        autoplayHoverPause: true,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            1000: {
+                                items: 4
+                            }
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="pt-5 pb-5 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="container">
+            <div class="title_main mb-4">
+                <h2 class="title-home" style="text-align: center;">Huan luyen vien
+                </h2>
+                <img src="./Themes/TH1041/Assets/images/titile.jpg" alt="">
+            </div>
+            <div class="content pt-2">
+
+                <div class="partner-logo hlv owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-dark">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-dark">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-dark">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-dark">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_tv hvr-float p-3">
+                            <div class="things text-center">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-dark">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $('.hlv').owlCarousel({
+                        loop: true,
+
+                        autoplay: true,
+                        nav: true,
+                        dots: false,
+                        autoplayTimeout: 2000,
+                        autoplayHoverPause: true,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            1000: {
+                                items: 4
+                            }
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </section>
+    <section class="services pt-5 pb-5 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="container">
+            <div class="title_main mb-4">
+                <h2 class="title-home text-white" style="text-align:
+                        center;">Video</h2>
+                <img src="./Themes/TH1041/Assets/images/titile.jpg" alt="">
+            </div>
+            <div class="content pt-2">
+
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <div class="video mt-3 ">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/JqNk2XEEDFQ" title="YouTube video mt-3 player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="video mt-3 ">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/JqNk2XEEDFQ" title="YouTube video mt-3 player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="video mt-3 ">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/JqNk2XEEDFQ" title="YouTube video mt-3 player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="video mt-3 ">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/JqNk2XEEDFQ" title="YouTube video mt-3 player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="video mt-3 ">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/JqNk2XEEDFQ" title="YouTube video mt-3 player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="video mt-3 ">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/JqNk2XEEDFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class=" pt-5 pb-5 wow fadeInDown " data-wow-duration="1s " data-wow-delay="1s ">
+        <div class="container">
+            <div class="title_main mb-4">
+                <h2 class="title-home " style="text-align:
+                            center;">Thu vien anh</h2>
+                <img src="./Themes/TH1041/Assets/images/titile.jpg" alt="">
+            </div>
+            <div class=" wow slideInRight animated">
+                <div class="gallery-album gallery-detail">
+                    <div id="ctl00_ContentPlaceHolder1_ctl00_pnHinhAnh">
+                        <div class="clearfix">
+                            <div class="clearfix _cc_chitiet">
+                                <div id="aniimated-thumbnials" class="list-unstyled columns thuvienanh clearfix">
+                                    <div class="flex_picture">
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture  ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="column thumb_image_gallery m-b-20">
+                                            <div class="box-img picture ">
+                                                <a href="./Themes/TH1041/Assets/images/tv.jpg" data-sub-html='IMG_4726.JPG'>
+                                                    <img class="img-responsive
+                                                                thumbnail" src='./Themes/TH1041/Assets/images/tv.jpg' alt='IMG_4726.JPG'>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="pt-5 pb-5 wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="container">
+            <div class="title_main mb-4">
+                <h2 class="title-home" style="text-align: center;">Tin tuc
+                </h2>
+                <img src="./Themes/TH1041/Assets/images/titile.jpg" alt="">
+            </div>
+            <div class="content pt-2">
+
+                <div class="partner-logo news owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="box_news hvr-float p-3">
+                            <div class="news_tt">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-muted">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_news hvr-float p-3">
+                            <div class="news_tt">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-muted">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_news hvr-float p-3">
+                            <div class="news_tt">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-muted">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_news hvr-float p-3">
+                            <div class="news_tt">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan
+                                    </h3>
+                                    <p class="text-muted">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="box_news hvr-float p-3">
+                            <div class="news_tt">
+                                <div class="box_img">
+                                    <a href="" title="" alt="">
+                                        <img src="./Themes/TH1041/Assets/images/tv.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="text_sp mt-2 text-dark">
+                                    <h3 class="text-dark">
+                                        Anh Tuan Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </h3>
+                                    <p class="text-muted">
+                                        Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN) Võ sinh đai đen Taekwondo (HN)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $('.news').owlCarousel({
+                        loop: true,
+
+                        autoplay: true,
+                        nav: true,
+                        dots: false,
+                        autoplayTimeout: 2000,
+                        autoplayHoverPause: true,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            1000: {
+                                items: 3
+                            }
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+    </section>
+    <section class="bg_dk pt-5 pb-5 wow fadeInDown " data-wow-duration="1s " data-wow-delay="1s ">
+        <div class="container">
+            <div class="title_main mb-4">
+                <h2 class="title-home text-white " style="text-align:
+                            center;">Thu vien anh</h2>
+                <img src="./Themes/TH1041/Assets/images/titile.jpg" alt="">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="img_dk">
+                        <img src="./Themes/TH1041/Assets/images/sl1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+
+                    <div class="box_dk">
+                        <p>Vui lòng điền thông tin chính xác vào form bên dưới chúng tôi sẽ gọi cho bạn sớm nhất.</p>
+                        <div role="form" class="wpcf7" id="wpcf7-f328-p2-o1" lang="vi" dir="ltr">
+                            <form action="" method="post" class="" novalidate="novalidate">
+
+                                <input type="text" placeholder="Họ và tên..." name="" value="">
+                                <input type="number" placeholder="Số điện thoại..." name="" value="">
+                                <input type="text" placeholder="Địa chỉ..." name="" value="">
+                                <textarea name="" cols="20" rows="3" class="" aria-invalid="false" placeholder="Ghi chú thêm..."></textarea>
+                                <button class="submit" type="submit">Đăng ký nhận báo giá</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-5 pb-5 wow fadeInDown bg_ft" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="contact_ft">
+
+                        <h3><span style="color: #bd141a;">Giới thiệu</span></h3>
+                        <p><span>Đến phòng gym / Fitness mỗi ngày không những giúp bạn sở hữu một thể hình đẹp mà còn giúp bạn nâng cao sức khỏe, giải tỏa cảm xúc hiệu quả hơn. AE FITNESS hôm nay sẽ chia sẻ đến cho bạn đọc những lợi ích của việc đến phòng gym tập luyện hằng ngày.</span></p>
+                        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td width="30"><img src="./Themes/TH1041/Assets/images/map-icon.jpg" alt="" width="21" height="25"></td>
+                                    <td>
+                                        <span> Số 116 Nguyễn Thị Minh Khai - TP HCM</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="./Themes/TH1041/Assets/images/hotline-icon.jpg" alt="" width="21" height="25"></td>
+                                    <td>(+84) 966-693-789</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="./Themes/TH1041/Assets/images/email.jpg" alt="" width="21" height="25"></td>
+                                    <td>topweb.com.vn@gmail.com</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="contact_ft">
+
+                        <h3><span style="color: #bd141a;"> Đăng ký nhận thông tin</span></h3>
+                        <p><span>Đăng ký email để nhận những thông tin mới nhất từ chúng tôi   </span></p>
+
+                        <ul class="ml-3">
+                            <li><span style="font-size: 90%;">Mọi thông tin góp ý, vui lòng liên hệ hotline: 01234.567.890</span></li>
+                            <li class="ft-info-title"><span style="font-size: 90%;">Email báo giá liên hệ: baogia@gmail.vn</span></li>
+                            <li class="ft-info-title"><span style="font-size: 90%;">Đặt hàng: 01234.567.890</span></li>
+                        </ul>
+                        <a rel="noopener noreferrer" href="index.html#" target="_blank" class=" success is-outline lowercase" style="border-radius:99px;">
+                            <span>Tư vấn ngay</span>
+                            <i class="fas fa-angle-right ml-3"></i></a>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="contact_ft">
+                        <h3><span style="color: #bd141a;">Kết nối với chúng tôi</span></h3>
+                        <p><span>                        Kết nối tới các mạng xã hội của chúng tôi để không bỏ lỡ khuyến mãi lớn nào.
+                        </span></p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class=" wow fadeInDown " data-wow-duration="1s" data-wow-delay="1s">
+        <div class="container">
+            <div class="copyright-footer text-center">
+                <div style="padding-top: 10px"><strong>Copyright 2021 © <a class="text-danger" href="https://cagt.vn">Thiết kế website CAGT</a> bởi cagt.vn</strong></div>
+            </div>
+        </div>
+    </section>
+    <div class="bottom-contact">
+        <ul>
+            <li>
+                <a id="goidien" href="tel:0986.989.626">
+                    <img src="http://topweb.com.vn/wp-content/uploads/2019/06/icon-phone2.png">
+                    <br>
+                    <span>Gọi điện</span>
+                </a>
+            </li>
+            <li>
+                <a id="nhantin" href="sms:0986.989.626">
+                    <img src="http://topweb.com.vn/wp-content/uploads/2019/06/icon-sms2.png">
+                    <br>
+                    <span>Nhắn tin</span>
+                </a>
+            </li>
+            <li>
+                <a id="chatzalo" href="http://zalo.me/0986.989.626">
+                    <img src="http://topweb.com.vn/wp-content/uploads/2019/06/icon-zalo2.png">
+                    <br>
+                    <span>Chat zalo</span>
+                </a>
+            </li>
+            <li>
+                <a id="chatfb" href="https://www.messenger.com/t/topweb.com.vn">
+                    <img src="http://topweb.com.vn/wp-content/uploads/2019/06/icon-mesenger2.png">
+                    <br>
+                    <span>Chat Fb</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="float-contact">
+        <button class="chat-zalo"><a href="http://zalo.me/0986.989.626">Chat Zalo</a></button>
+        <button class="chat-face"><a href="http://m.me/topweb.com.vn">Chat Facebook</a></button>
+        <button class="hotline"><a href="tel:0986.989.626">Hotline: 0986.989.626</a></button>
+    </div>
+    <script type="text/javascript " src="Themes/TH1041/Assets/js/lightgallery-all.min.js "></script>
+    <script type="text/javascript " src="Themes/TH1041/Assets/js/image-gallery.js "></script>
+    <script type="text/javascript " src="Themes/TH1041/Assets/js/custom.js "></script>
+
+    <script type="text/javascript " src="Themes/TH1041/Assets/js/menu.js "></script>
+
+    <script src="Themes/TH1041/Assets/js/wow.min.js "></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        $(window).resize(function() {
+            if ($(window).width() > 767) {
+                $(window).scroll(function() {
+                    var sticky = $('#myHeader'),
+                        scroll = $(window).scrollTop();
+
+                    if (scroll >= 100) sticky.addClass('sticky');
+                    else sticky.removeClass('sticky');
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>
